@@ -1,3 +1,4 @@
+using BookStoreAPI.Repository;
 using Microsoft.EntityFrameworkCore;
 using System;
 
@@ -11,9 +12,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("AppDB"))
-            );
+                options.UseSqlServer(builder.Configuration.GetConnectionString("AppDB")));
 
+builder.Services.AddTransient<IBookRepository, BookRepository>();
 
 var app = builder.Build();
 
