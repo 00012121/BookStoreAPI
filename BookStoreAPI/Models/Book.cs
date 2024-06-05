@@ -9,7 +9,6 @@ namespace BookStoreAPI.Models
 
         public string PublishYear { get; set; }
 
-        [JsonIgnore]
         public Author Author { get; set; }
 
         public int AuthorId { get; set; }

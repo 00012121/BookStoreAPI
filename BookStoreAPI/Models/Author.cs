@@ -1,4 +1,6 @@
-﻿namespace BookStoreAPI.Models
+﻿using System.Text.Json.Serialization;
+
+namespace BookStoreAPI.Models
 {
     public class Author
     {
@@ -8,7 +10,7 @@
         public string LastName { get; set; }
 
         public int Age { get; set; }
-
+        [JsonIgnore]
         public ICollection<Book> Books { get; set; }
     }
 }

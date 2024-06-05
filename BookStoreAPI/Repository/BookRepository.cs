@@ -46,7 +46,7 @@ namespace BookStoreAPI.Repository
                 bookToUpdate.AuthorId = bookDto.AuthorId;
 
                 _context.Book.Update(bookToUpdate);
-                _context.SaveChanges();
+                _context.SaveChanges(); 
 
             }
         }
